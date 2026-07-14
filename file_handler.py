@@ -56,16 +56,5 @@ def count_ip(data):
     ip_count_name , ip_count_num = zip(*ip_count)
     
     max_ip = max(ip_count_num)
-    index = ip_count_num.index(max_ip)
-    
-
-    
-    
+    index = ip_count_num.index(max_ip) 
     return ip_count_name[index] , max_ip , sus_ips
-
-
-
-# max_count = max(ip_count_num)
-# index = ip_count_num.index(max_count)
-
-# return ip_count_name[index], max_count
