@@ -57,7 +57,7 @@ def save_file(data , total_entries , p_entry , n_entry , failed , most_active_ip
             file.write(f" {i[0]} with count {i[1]} \n")
         file.write("================================= \n")
         
-        file.write(f"Failed Logs : \n")s
+        file.write(f"Failed Logs : \n")
         for i in range (len(failed)) :
             file.write(f"{i}. Failed Log: {failed[i]}")
             

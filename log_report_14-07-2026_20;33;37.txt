@@ -1,0 +1,38 @@
+ Timed : 14-07-2026_20;33;37 
+================================= 
+================================= 
+       Log Analyzer Report        
+================================= 
+Entries :=  
+ Total Entries : 50 
+ Passed Entries : 32 
+ Failed Entries : 18 
+ Failure Rate : 36.0 %  
+ Most active ip : 192.168.10.7  count 4 
+ 
+Sus ips :=  
+ 192.168.10.7 with count 4 
+ 192.168.13.20 with count 3 
+ 192.168.17.20 with count 3 
+ 192.168.5.10 with count 3 
+================================= 
+Failed Logs : 
+0. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.1.10
+1. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.1.25
+2. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.2.12
+3. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.3.8
+4. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.5.10
+5. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.5.10
+6. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.8.35
+7. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.10.7
+8. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.10.7
+9. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.10.7
+10. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.13.20
+11. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.15.25
+12. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.17.20
+13. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.19.14
+14. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.22.18
+15. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.25.11
+16. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.27.9
+17. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.30.10
+================================= 
