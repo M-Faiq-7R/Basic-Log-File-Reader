@@ -39,7 +39,7 @@ def display_report():
 def save_file(data , total_entries , p_entry , n_entry , failed , most_active_ip , active_ip_count , sus_ips):
     time_ = datetime.datetime.now().strftime("%d-%m-%Y_%H;%M;%S")
     with open (f"log_report_{time_}.txt" , 'x') as file:
-        file.write(f" Timed : {time_}") 
+        file.write(f" Timed : {time_} \n") 
         file.write("================================= \n")
         file.write("================================= \n")
         file.write("       Log Analyzer Report        \n")
@@ -57,7 +57,7 @@ def save_file(data , total_entries , p_entry , n_entry , failed , most_active_ip
             file.write(f" {i[0]} with count {i[1]} \n")
         file.write("================================= \n")
         
-        file.write(f"Failed Logs : \n")
+        file.write(f"Failed Logs : \n")s
         for i in range (len(failed)) :
             file.write(f"{i}. Failed Log: {failed[i]}")
             
