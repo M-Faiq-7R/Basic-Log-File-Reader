@@ -40,6 +40,7 @@ def ip_find(line):  # returns ip
 def count_ip(data):
     ip_total = positive_negative_entries(data ,0)
     ip_total_set = set(ip_total)
+    sus_ips= []
     ip_count = []
     
     for ip in ip_total_set:
@@ -48,6 +49,8 @@ def count_ip(data):
             if current_ip == ip:
                 count += 1 
         ip_count.append([ip,count])
+        if count >= 3:
+            sus_ips.append([ip,count])
         
     
     ip_count_name , ip_count_num = zip(*ip_count)
@@ -55,7 +58,10 @@ def count_ip(data):
     max_ip = max(ip_count_num)
     index = ip_count_num.index(max_ip)
     
-    return ip_count_name[index] , max_ip
+
+    
+    
+    return ip_count_name[index] , max_ip , sus_ips
 
 
 
