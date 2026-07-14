@@ -7,21 +7,26 @@ def read_file():                       # reads file and stores all its data in a
             data.append(line)
     return data
 
-def positive_negative_entries(data):       # Main Function    # It manages all the instructions and data
+def positive_negative_entries(data , i=1):       # Main Function    # It manages all the instructions and data
     
     p_entries = 0
     n_entries = 0
     failed = []
     ip_set = set()
+    ip_total = []
     for d in data:
-        u_ip = ip_find(d)
-        ip_set.add(u_ip)
+        ip = ip_find(d)
+        ip_total.append(ip)
+        ip_set.add(ip)
         if "LOGIN_SUCCESS" in d:
             p_entries = p_entries + 1
         elif "LOGIN_FAILED" in d:
             n_entries = n_entries + 1
             failed.append(d)
-    return p_entries,n_entries , u_ip , failed
+    if i == 1:
+        return p_entries,n_entries , ip , failed, ip_set
+    elif i == 0:
+        return ip_total
 
 def ip_find(line):  # returns ip
     l_data = line.split()
@@ -32,3 +37,29 @@ def ip_find(line):  # returns ip
         pass
      
     
+def count_ip(data):
+    ip_total = positive_negative_entries(data ,0)
+    ip_total_set = set(ip_total)
+    ip_count = []
+    
+    for ip in ip_total_set:
+        count = 0                  
+        for current_ip in ip_total:
+            if current_ip == ip:
+                count += 1 
+        ip_count.append([ip,count])
+        
+    
+    ip_count_name , ip_count_num = zip(*ip_count)
+    
+    max_ip = max(ip_count_num)
+    index = ip_count_num.index(max_ip)
+    
+    return ip_count_name[index] , max_ip
+
+
+
+# max_count = max(ip_count_num)
+# index = ip_count_num.index(max_count)
+
+# return ip_count_name[index], max_count
