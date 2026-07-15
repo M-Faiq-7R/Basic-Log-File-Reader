@@ -1,4 +1,4 @@
- Timed : 14-07-2026_20;33;37 
+ Timed : 14-07-2026_21;11;51 
 ================================= 
 ================================= 
        Log Analyzer Report        
@@ -12,9 +12,9 @@ Entries :=
  
 Sus ips :=  
  192.168.10.7 with count 4 
+ 192.168.5.10 with count 3 
  192.168.13.20 with count 3 
  192.168.17.20 with count 3 
- 192.168.5.10 with count 3 
 ================================= 
 Failed Logs : 
 0. Failed Log: 2026-06-12 LOGIN_FAILED 192.168.1.10
